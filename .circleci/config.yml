@@ -16,7 +16,7 @@ jobs:
           command: |
             aws cloudformation deploy \
               --template-file template.yml \
-              --stack-name aws_infra
+              --stack-name awsinfra
 # Orchestrate or schedule a set of jobs
 workflows:
   # Name the workflow "welcome"
