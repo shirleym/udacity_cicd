@@ -2,11 +2,11 @@ Resources:
   Ec2Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
-      SecurityGroups:
-      - !Ref InstanceSecurityGroup
       NetworkInterfaces:
         - SubnetId: subnet-0491d85b30e0a35d0
           DeviceIndex: "0"
+          GroupSet:
+          - Ref: InstanceSecurityGroup
       KeyName: udacity
       ImageId: 'ami-0a634ae95e11c6f91'
       InstanceType: t2.medium
